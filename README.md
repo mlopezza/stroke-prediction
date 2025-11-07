@@ -115,44 +115,55 @@ Exploration of  Types of data in the dataset to standardize it. Handle missing v
 - Think about the ethical part in insurance 
 
 
+
 ## Data Exploration: 
 
 ### Identifying correlations: Preliminary visualization of data to understand patterns, correlations and data distribution.
 - How many observations with stroke we have? (insert the first graphic)
+- After extract the observations with stroke we figuraud a big imbalances int he dataset, we only found: 249 obervations with stroke plus 40 observation with stroke with smoking status unknown. 
+- In adition, the big difrence between the BMI values, with  min value 10.3 and max value 97.6, made difficult the visualization of the correlation stroke vs. BMI, for this reason we used the BMI classification from the CDC:
+	- <18.5: Underweight
+	- 18.5>25 Healthy Weight
+	- 25>=30: Overweight
+	- => 30 Obesity
+- The big diference between average glucose level with min value in 55, and max value in 271, was an issue as well, we decide to use the American Diabetes Asociation  clasificationes:  
+	- 140 mg/dl or less:  normal value.
+	- 141 to 199 mg/dl: prediabetes or oral glucose intolerance.
+	- More than 200 mg/dl: Diabetes.
 
-### Consider demographic factors in dataset: 
-- How many womans and mens with stroke
-- Characterization of stroke: 
-- How many married and unmarried
-- How many living in urban setting and how many in city
-- How old are the people with strokes?
-- Where worked people with stroke? 
-- How many has HTA
-- How many has heart_disease
-- Glucose average: 
-	- min value is 55, max value is 271, we can’t take the mean, 
-	- we could separated in groups: to take in consideracion, aleatory glucose test  in value more than 200 mg/dl is diagnosis of Diabetes, therefore it is other comorbidity (we need to consider that in the analysis, it is another risk factor, sometimes patients arrive ‘without chronic diseases’ but they have it underdiagnosticated several years ago
-	-  I suggest this groups according with the American society of diabetes:  
-		- 140 mg/dl or less (use to be a normal value)
-		- 141 to 199 mg/dl  (prediabetes or oral glucose intolerance)
-		- More than 200 mg/dl Diabetes.
+### Demographic Characterization of patients with stroke: 
 
-- BMI: min value 10.3 and max value 97.6
-	- We can use de BMI classification from the CDC: 
-		- <18.5: Underweight
-		- 18.5>25 Healthy Weight
-		- 25>=30: Overweight
-		- >= 30 Obesity
-		- 30 to 35 Obesity class 1
-		- 35 to 40 Obesity class 2
-		- >=40 Obesity class 3 (severe Obesity)
+- Immutable demographic characteristics: 
+	- Gender: From our--- observations of stroke, ---% of them was men and ---% was women.
+	- Age: we couls observed a increase of stroke incidence after 58 years old with a peak after 78 years  old.
 
-- Stroke and smoke: 
+- Mutable demographic characteristics: 
+	- Marital status: --% was married and --% was unmarried
+	- Setting: --% living in urban setting and --%  in city	
+	- Type of work: Where worked people with stroke? 
+
+- Immutable Risk: 
+	- HTA: ---% of patients with stroke has HTA,  and % of patients without a stroke  have it. 
+	- Heart_disease --- % of patients with stroke has HTA and % of patientes without stroke have it. 
+
+
+- Mutable Risk Factors: 
+	- Glucose average: Acording with the American society of diabetes clasification, and in base of glucose average, %-- of the patients had an average in the diagnosis range of diabetes that was not reported in the dataset information or used as charactertistic, also, % had an average of glucose in   oral glucose intolerance and only %--- have a normal value. 
+		- when we compare with patients without stroke, only---% of then had glucose average in diabetic range, % in oral glucose intolerance and %.--- had a normal value. 
+
+	- BMI: Using the BMI clasification from CDC, from patients with stroke,  ---% had Obesity, --% had  Overweight, --% had Healthy Weight and %.. had Underweight, the % of patients without stroke %--- 
+		
+	- Stroke and smoke: 
 	- “formerly smoked"
 	- "never smoked"
 	- "smokes" 
 	- "Unknown
 
+
+Age: We clasified as children 0-14
+15-25 youth
+Adult 25 to 64, 
+Senior 65 and more. 
 
 
 
@@ -184,7 +195,7 @@ Exploration of  Types of data in the dataset to standardize it. Handle missing v
 
 ### Stakeholders: 
 - Health providers: to develop preventive strategies that could save money to the health system.
-- Insurance Companies: Live insurance, to know insurable individuals ? to develop preventive strategies between the individuals that are actually insurable.
+- Insurance Companies: Live insurance, to know insurable individuals ? to develop preventive strategies between the individuals that actually have a live insurance.
 - Marketing segmentation: 
 	- industries that develop products that help to prevent it
 	- industries that develop products that could help with stroke  disability?
@@ -203,7 +214,7 @@ Exploration of  Types of data in the dataset to standardize it. Handle missing v
 ## Next Task: 
 - Clean and standardize the data
 - Preliminary visualization of the correlation between the variables
-
+- Made graphics stroke vrs without stroke: HTA, HD, Smoke, Glucose, BMI
 
 ----
 
@@ -213,5 +224,10 @@ Exploration of  Types of data in the dataset to standardize it. Handle missing v
 - (1)https://www.canada.ca/en/public-health/services/publications/diseases-conditions/stroke-canada-fact-sheet.html
 - Dong Y, Peng CY. Principled missing data methods for researchers. Springerplus. 2013 May 14;2(1):222. doi: 10.1186/2193-1801-2-222. PMID: 23853744; PMCID: PMC3701793.
 - Junaid, K.P., Kiran, T., Gupta, M. et al. How much missing data is too much to impute for longitudinal health indicators? A preliminary guideline for the choice of the extent of missing proportion to impute with multiple imputation by chained equations. Popul Health Metrics 23, 2 (2025). https://doi.org/10.1186/s12963-025-00364-2
-- https://diabetes.org/espanol/diagnostico
+- https://diabetes.org/about-diabetes/diagnosis
 - https://www.cdc.gov/bmi/adult-calculator/bmi-categories.html
+<<<<<<< Updated upstream
+=======
+- https://www.statcan.gc.ca/en/concepts/definitions/age2
+
+>>>>>>> Stashed changes
