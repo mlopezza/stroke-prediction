@@ -13,6 +13,7 @@ https://github.com/Abayomiokojie/stroke-prediction.git
 	├──── raw
 	├──── sql
 	├── experiments
+	├── images
 	├── models
 	├── reports
 	├── src
@@ -21,6 +22,7 @@ https://github.com/Abayomiokojie/stroke-prediction.git
 
 - Data: Contains the raw, processed and final data. For any data living in a database, make sure to export the tables out into the sql folder, so it can be used by anyone else.
 - Experiments: A folder for experiments.
+- Images: A folder containing final images.
 - Models: A folder containing trained models or model predictions.
 - Reports: Generated HTML, PDF etc. of your report.
 - src: Project source code.
@@ -284,8 +286,7 @@ Exploration of  Types of data in the dataset to standardize it. Handle missing v
 - Junaid, K.P., Kiran, T., Gupta, M. et al. How much missing data is too much to impute for longitudinal health indicators? A preliminary guideline for the choice of the extent of missing proportion to impute with multiple imputation by chained equations. Popul Health Metrics 23, 2 (2025). https://doi.org/10.1186/s12963-025-00364-2
 - https://diabetes.org/about-diabetes/diagnosis
 - https://www.cdc.gov/bmi/adult-calculator/bmi-categories.html
-<<<<<<< Updated upstream
-=======
+- https://scikit-learn.org/stable/modules/impute.html
 - https://www.statcan.gc.ca/en/concepts/definitions/age2
 
->>>>>>> Stashed changes
+
