@@ -1,11 +1,31 @@
 # Stroke Risk Stratification: Identifying Vulnerable Individuals through Data Visualization. 
-Predicting the occurence of stroke in individuals using demographic and health-related factors
+Predicting the occurence of stroke in individuals using demographic and health-related factors.
 
 ### Type of project: Data Storytelling and Visualization Project.
 
 
 ## GitHub Repo:
 https://github.com/Abayomiokojie/stroke-prediction.git
+
+## Repository Structure:
+	├── data
+	├──── processed
+	├──── raw
+	├──── sql
+	├── experiments
+	├── models
+	├── reports
+	├── src
+	├── README.md
+	└── .gitignore
+
+- Data: Contains the raw, processed and final data. For any data living in a database, make sure to export the tables out into the sql folder, so it can be used by anyone else.
+- Experiments: A folder for experiments.
+- Models: A folder containing trained models or model predictions.
+- Reports: Generated HTML, PDF etc. of your report.
+- src: Project source code.
+- README: This file
+- .gitignore: Files to exclude from this folder (e.g., large data files).
 
 ### Expectations for Week 1
 After Week 1, you will be evaluated on your project's README file. By this point, it must include a 
@@ -102,11 +122,10 @@ Exploration of  Types of data in the dataset to standardize it. Handle missing v
 ##### Missing Values:
 - It was found some 'N/A' values in 'bmi' column, and 'unknowns' in 'smoking_status' column (data unavailable for patient). 
 - After careful consideration and analysis, and taking into account the different types of data each column provides, we handle them as follows:
-	- BMI missing values (NaN) represent 201 observations, which corresponds to 4% of the dataset. This is within the acceptable range for using imputation with minimal risk to the dataset.
+	- BMI missing values (NaN) represent 201 observations, which corresponds to 4% of the dataset. This is within the acceptable range for using imputation with minimal risk to the dataset. Furthermore, the data is considered Missing Not at Random (MNAR) because it depends on the respondents’ willingness to disclose their weight. 
 
-		However, the BMI column has a minimum value of 10.3 and a maximum value of 97.6, with a mean of 28.8. Because of the large gap between these values, we decided to handle the missing data in this column through imputation using KNN.
+		However, the BMI column has a minimum value of 10.3 and a maximum value of 97.6, with a mean of 28.8. Because of the large gap between these values, we decided to handle the missing data in this column through imputation using KNN with a number of neighbords = 9.
 
-		We should scale the numerical data before applying KNN for imputation.
 
 	- The smoking_status value “Unknown” represents 1,544 observations, which corresponds to 30% of the dataset. In addition, this attribute only allows three answer options: never smoked, formerly smoked, and smokes.
 	
@@ -133,28 +152,43 @@ Exploration of  Types of data in the dataset to standardize it. Handle missing v
 #### Identifying correlations: Preliminary visualization of data to understand patterns, correlations and data distribution.
 - How many observations with stroke we have? (insert the first graphic)
 
-- After extract the observations with stroke we figuraud a big imbalances in the dataset, we only found: 249 obervations with stroke 
+- After extract the observations with stroke we figuraud a big imbalances in the dataset, we only found: 249 obervations with stroke. It means only 4.9% of the observations.  
 - In adition, the big difrence between the BMI values, with  min value 10.3 and max value 97.6, made difficult the visualization of the correlation Stroke vs. BMI, for this reason we used the BMI classification from the CDC:
 	- <18.5: Underweight
 	- 18.5>25 Healthy Weight
 	- 25>=30: Overweight
 	- => 30 Obesity
 - The big diference between average glucose level with min value in 55, and max value in 271, was an issue as well, we decide to use the American Diabetes Asociation  clasification:  
-	- 140 mg/dl or less:  normal value.
+	- les tan 70 mg/dl: Low glucosa level
+	- 70 yo 140 mg/dl Healthy Value
 	- 141 to 199 mg/dl: prediabetes or oral glucose intolerance.
 	- More than 200 mg/dl: Diabetes.
+- We used the canadian clasification for age: 
+	- children 0-14 years old
+	- youth 15-25 years old
+	- Adult 25 to 64 years old
+	- Senior 65 and more years old
 
 ## Findings and Analysis
 
-### Demographic Characterization of patients with stroke: 
+### Demographic Characterization of observations with and without stroke: 
 
 - Immutable demographic characteristics: 
-	- Gender: From our 249 observations of stroke, ---% of them was men and ---% was women.
-	- Age: we could observed a increase of stroke incidence after 58 years old with a peak after 78 years  old.
-	¿how many people over 58 years old is married? and how many is single?
+	- Gender: 
+		- From the total observations, 41.4% of them was men and 58.6% was women.
+		- From our 249 observations of stroke, 43.4% of them was men and 56.6% was women.
+
+	- Age: we could observed a increase of stroke incidence after 57 years old with a peak after 78 years  old.
+		- 31.7% of observations had 57 or more years old and 68.3% had less than 57 years old. 
+		- --- % was children between 0-14 years old
+		- --- % was youth between 15-25 years old
+		- ----%was Adult between 25 to 64 years old
+		- ---- % was Senior between 65 and more years old
 
 - Mutable demographic characteristics: 
-	- Marital status: --% was married and --% was unmarried, however, --% of stroke observation had more than--years old, therefore, it is an inbalance of categorie and is dificult to make a conclution here. 
+	- Marital status: 
+		- 
+		- Stroke: 88.4% was married and 11.6%% was never merried, however, --% of stroke observation had more than--years old, therefore, it is an inbalance of categorie and is dificult to make a conclution here. 
 
 	- Setting: --% living in urban setting and --%  in city	
 	- Type of work: Where worked people with stroke? 
@@ -179,10 +213,7 @@ Exploration of  Types of data in the dataset to standardize it. Handle missing v
 	- "Unknown
 
 
-Age: We clasified as children 0-14
-15-25 youth
-Adult 25 to 64, 
-Senior 65 and more. 
+
 
 
 
