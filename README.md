@@ -23,6 +23,7 @@ Predicting the occurence of stroke in individuals using demographic and health-r
 
 - Data: Contains the raw, processed and final data. For any data living in a database, make sure to export the tables out into the sql folder, so it can be used by anyone else.
 - Experiments: A folder for experiments.
+- Images: A folder containing final images.
 - Models: A folder containing trained models or model predictions.
 - Reports: Generated HTML, PDF etc. of your report.
 - src: Project source code.
