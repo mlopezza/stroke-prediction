@@ -1,0 +1,29 @@
+original_col,category_value,one_hot_col
+gender,Male,gender_Male
+gender,Female,gender_Female
+gender,Other,gender_Other
+ever_married,Yes,ever_married_Yes
+ever_married,No,ever_married_No
+work_type,Private,work_type_Private
+work_type,Self-employed,work_type_Self-employed
+work_type,Govt_job,work_type_Govt_job
+work_type,children,work_type_children
+work_type,Never_worked,work_type_Never_worked
+residence_type,Urban,residence_type_Urban
+residence_type,Rural,residence_type_Rural
+smoking_status,formerly smoked,smoking_status_formerly smoked
+smoking_status,never smoked,smoking_status_never smoked
+smoking_status,smokes,smoking_status_smokes
+smoking_status,Unknown,smoking_status_Unknown
+age_category,Senior,age_category_Senior
+age_category,Adult,age_category_Adult
+age_category,Children,age_category_Children
+age_category,Youth,age_category_Youth
+bmi_category,Obesity,bmi_category_Obesity
+bmi_category,Healthy Weight,bmi_category_Healthy Weight
+bmi_category,Overweight,bmi_category_Overweight
+bmi_category,Underweight,bmi_category_Underweight
+glucose_category,Diabetic,glucose_category_Diabetic
+glucose_category,Healthy,glucose_category_Healthy
+glucose_category,Pre-Diabetic,glucose_category_Pre-Diabetic
+glucose_category,Low,glucose_category_Low
