@@ -1,0 +1,250 @@
+id,gender,age,hypertension,heart_disease,ever_married,work_type,residence_type,avg_glucose_level,bmi,smoking_status,stroke,age_category,bmi_category,glucose_category
+9046,Male,67.0,0,1,Yes,Private,Urban,229,37,formerly smoked,1,Senior,Obesity,Diabetic
+51676,Female,61.0,0,0,Yes,Self-employed,Rural,202,34,never smoked,1,Adult,Obesity,Diabetic
+31112,Male,80.0,0,1,Yes,Private,Rural,106,32,never smoked,1,Senior,Obesity,Healthy
+60182,Female,49.0,0,0,Yes,Private,Urban,171,34,smokes,1,Adult,Obesity,Pre-Diabetic
+1665,Female,79.0,1,0,Yes,Self-employed,Rural,174,24,never smoked,1,Senior,Healthy Weight,Pre-Diabetic
+56669,Male,81.0,0,0,Yes,Private,Urban,186,29,formerly smoked,1,Senior,Overweight,Pre-Diabetic
+53882,Male,74.0,1,1,Yes,Private,Rural,70,27,never smoked,1,Senior,Overweight,Healthy
+10434,Female,69.0,0,0,No,Private,Urban,94,23,never smoked,1,Senior,Healthy Weight,Healthy
+27419,Female,59.0,0,0,Yes,Private,Rural,76,27,Unknown,1,Adult,Overweight,Healthy
+60491,Female,78.0,0,0,Yes,Private,Urban,59,24,Unknown,1,Senior,Healthy Weight,Low
+12109,Female,81.0,1,0,Yes,Private,Rural,80,30,never smoked,1,Senior,Obesity,Healthy
+12095,Female,61.0,0,1,Yes,Govt_job,Rural,120,37,smokes,1,Adult,Obesity,Healthy
+12175,Female,54.0,0,0,Yes,Private,Urban,105,27,smokes,1,Adult,Overweight,Healthy
+8213,Male,78.0,0,1,Yes,Private,Urban,220,32,Unknown,1,Senior,Obesity,Diabetic
+5317,Female,79.0,0,1,Yes,Private,Urban,214,28,never smoked,1,Senior,Overweight,Diabetic
+58202,Female,50.0,1,0,Yes,Self-employed,Rural,167,31,never smoked,1,Adult,Obesity,Pre-Diabetic
+56112,Male,64.0,0,1,Yes,Private,Urban,192,38,smokes,1,Adult,Obesity,Pre-Diabetic
+34120,Male,75.0,1,0,Yes,Private,Urban,221,26,smokes,1,Senior,Overweight,Diabetic
+27458,Female,60.0,0,0,No,Private,Urban,89,38,never smoked,1,Adult,Obesity,Healthy
+25226,Male,57.0,0,1,No,Govt_job,Urban,217,33,Unknown,1,Adult,Obesity,Diabetic
+70630,Female,71.0,0,0,Yes,Govt_job,Rural,194,22,smokes,1,Senior,Healthy Weight,Pre-Diabetic
+13861,Female,52.0,1,0,Yes,Self-employed,Urban,233,49,never smoked,1,Adult,Obesity,Diabetic
+68794,Female,79.0,0,0,Yes,Self-employed,Urban,229,27,never smoked,1,Senior,Overweight,Diabetic
+64778,Male,82.0,0,1,Yes,Private,Rural,208,32,Unknown,1,Senior,Obesity,Diabetic
+4219,Male,71.0,0,0,Yes,Private,Urban,103,27,formerly smoked,1,Senior,Overweight,Healthy
+70822,Male,80.0,0,0,Yes,Self-employed,Rural,104,24,never smoked,1,Senior,Healthy Weight,Healthy
+38047,Female,65.0,0,0,Yes,Private,Rural,101,28,formerly smoked,1,Senior,Overweight,Healthy
+61843,Male,58.0,0,0,Yes,Private,Rural,190,37,Unknown,1,Adult,Obesity,Pre-Diabetic
+54827,Male,69.0,0,1,Yes,Self-employed,Urban,195,28,smokes,1,Senior,Overweight,Pre-Diabetic
+69160,Male,59.0,0,0,Yes,Private,Rural,212,38,formerly smoked,1,Adult,Obesity,Diabetic
+43717,Male,57.0,1,0,Yes,Private,Urban,212,44,smokes,1,Adult,Obesity,Diabetic
+33879,Male,42.0,0,0,Yes,Private,Rural,83,25,Unknown,1,Adult,Overweight,Healthy
+39373,Female,82.0,1,0,Yes,Self-employed,Urban,197,22,never smoked,1,Senior,Healthy Weight,Pre-Diabetic
+54401,Male,80.0,0,1,Yes,Self-employed,Urban,253,30,formerly smoked,1,Senior,Obesity,Diabetic
+14248,Male,48.0,0,0,No,Govt_job,Urban,84,30,never smoked,1,Adult,Obesity,Healthy
+712,Female,82.0,1,1,No,Private,Rural,84,26,formerly smoked,1,Senior,Overweight,Healthy
+47269,Male,74.0,0,0,Yes,Private,Rural,220,34,formerly smoked,1,Senior,Obesity,Diabetic
+24977,Female,72.0,1,0,Yes,Private,Rural,75,23,formerly smoked,1,Senior,Healthy Weight,Healthy
+47306,Male,58.0,0,0,No,Private,Rural,93,32,Unknown,1,Adult,Obesity,Healthy
+62602,Female,49.0,0,0,Yes,Private,Urban,61,30,never smoked,1,Adult,Obesity,Low
+4651,Male,78.0,0,0,Yes,Private,Rural,78,24,formerly smoked,1,Senior,Healthy Weight,Healthy
+1261,Male,54.0,0,0,Yes,Private,Urban,71,28,never smoked,1,Adult,Overweight,Healthy
+61960,Male,82.0,0,1,Yes,Private,Urban,145,26,smokes,1,Senior,Overweight,Pre-Diabetic
+1845,Female,63.0,0,0,Yes,Private,Urban,91,30,formerly smoked,1,Adult,Obesity,Healthy
+7937,Male,60.0,1,0,Yes,Govt_job,Urban,213,20,smokes,1,Adult,Healthy Weight,Diabetic
+19824,Male,76.0,1,0,Yes,Private,Rural,244,34,never smoked,1,Senior,Obesity,Diabetic
+37937,Female,75.0,0,1,No,Self-employed,Urban,110,27,Unknown,1,Senior,Overweight,Healthy
+47472,Female,58.0,0,0,Yes,Private,Urban,107,39,formerly smoked,1,Adult,Obesity,Healthy
+35626,Male,81.0,0,0,Yes,Self-employed,Urban,99,34,never smoked,1,Senior,Obesity,Healthy
+36338,Female,39.0,1,0,Yes,Private,Rural,58,39,smokes,1,Adult,Obesity,Low
+18587,Female,76.0,0,0,No,Private,Urban,90,32,Unknown,1,Senior,Obesity,Healthy
+15102,Male,78.0,1,0,Yes,Private,Urban,75,28,formerly smoked,1,Senior,Overweight,Healthy
+59190,Female,79.0,0,1,Yes,Private,Rural,127,28,never smoked,1,Senior,Overweight,Healthy
+47167,Female,77.0,1,0,Yes,Self-employed,Urban,124,31,never smoked,1,Senior,Obesity,Healthy
+8752,Female,63.0,0,0,Yes,Govt_job,Urban,198,35,never smoked,1,Adult,Obesity,Pre-Diabetic
+25831,Male,63.0,0,1,Yes,Private,Rural,197,36,formerly smoked,1,Adult,Obesity,Pre-Diabetic
+38829,Female,82.0,0,0,Yes,Private,Rural,59,33,never smoked,1,Senior,Obesity,Low
+66400,Male,78.0,0,0,Yes,Private,Urban,238,31,formerly smoked,1,Senior,Obesity,Diabetic
+58631,Male,73.0,1,0,Yes,Self-employed,Urban,195,33,never smoked,1,Senior,Obesity,Pre-Diabetic
+5111,Female,54.0,1,0,Yes,Govt_job,Urban,181,28,never smoked,1,Adult,Overweight,Pre-Diabetic
+10710,Female,56.0,0,0,Yes,Private,Urban,185,40,formerly smoked,1,Adult,Obesity,Pre-Diabetic
+55927,Female,80.0,1,0,Yes,Private,Rural,75,22,never smoked,1,Senior,Healthy Weight,Healthy
+65842,Female,67.0,1,0,Yes,Self-employed,Rural,62,25,smokes,1,Senior,Overweight,Low
+19557,Female,45.0,0,0,Yes,Private,Rural,94,30,formerly smoked,1,Adult,Obesity,Healthy
+7356,Male,75.0,0,0,Yes,Private,Urban,105,28,Unknown,1,Senior,Overweight,Healthy
+17013,Male,78.0,1,0,No,Private,Urban,113,24,never smoked,1,Senior,Healthy Weight,Healthy
+17004,Female,70.0,0,0,Yes,Private,Urban,222,48,never smoked,1,Senior,Obesity,Diabetic
+72366,Male,76.0,0,0,Yes,Private,Urban,104,20,Unknown,1,Senior,Healthy Weight,Healthy
+6118,Male,59.0,0,0,Yes,Private,Urban,86,30,formerly smoked,1,Adult,Obesity,Healthy
+7371,Female,80.0,1,0,Yes,Self-employed,Rural,73,29,never smoked,1,Senior,Overweight,Healthy
+70676,Female,76.0,0,0,Yes,Govt_job,Rural,63,27,formerly smoked,1,Senior,Overweight,Low
+2326,Female,67.0,1,0,Yes,Private,Rural,179,28,formerly smoked,1,Senior,Overweight,Pre-Diabetic
+27169,Female,66.0,1,0,Yes,Govt_job,Rural,117,31,formerly smoked,1,Senior,Obesity,Healthy
+50784,Male,63.0,0,0,Yes,Private,Rural,229,27,never smoked,1,Adult,Overweight,Diabetic
+19773,Female,52.0,0,0,Yes,Private,Rural,97,26,never smoked,1,Adult,Overweight,Healthy
+66159,Female,80.0,0,1,Yes,Self-employed,Rural,67,22,formerly smoked,1,Senior,Healthy Weight,Low
+36236,Male,80.0,1,0,Yes,Private,Urban,240,27,never smoked,1,Senior,Overweight,Diabetic
+71673,Female,79.0,0,0,Yes,Private,Urban,111,24,formerly smoked,1,Senior,Healthy Weight,Healthy
+45805,Female,51.0,0,0,Yes,Private,Urban,165,27,never smoked,1,Adult,Overweight,Pre-Diabetic
+42117,Male,43.0,0,0,Yes,Self-employed,Urban,143,46,Unknown,1,Adult,Obesity,Pre-Diabetic
+57419,Male,59.0,0,0,Yes,Private,Rural,96,44,Unknown,1,Adult,Obesity,Healthy
+26015,Female,66.0,0,0,Yes,Self-employed,Urban,101,30,Unknown,1,Senior,Obesity,Healthy
+26727,Female,79.0,0,0,No,Private,Rural,89,23,never smoked,1,Senior,Healthy Weight,Healthy
+66638,Female,68.0,1,0,No,Self-employed,Urban,80,30,never smoked,1,Senior,Obesity,Healthy
+70042,Male,58.0,0,0,Yes,Private,Urban,71,27,Unknown,1,Adult,Overweight,Healthy
+32399,Male,54.0,0,0,Yes,Private,Rural,97,29,smokes,1,Adult,Overweight,Healthy
+3253,Male,61.0,0,1,Yes,Private,Rural,112,27,smokes,1,Adult,Overweight,Healthy
+71796,Female,70.0,0,1,Yes,Private,Rural,59,32,formerly smoked,1,Senior,Obesity,Low
+14499,Male,47.0,0,0,Yes,Private,Urban,87,41,formerly smoked,1,Adult,Obesity,Healthy
+49130,Male,74.0,0,0,Yes,Private,Urban,99,26,Unknown,1,Senior,Overweight,Healthy
+28291,Female,79.0,0,1,Yes,Private,Urban,227,30,never smoked,1,Senior,Obesity,Diabetic
+51169,Male,81.0,0,0,Yes,Private,Urban,73,26,never smoked,1,Senior,Overweight,Healthy
+66315,Female,57.0,0,0,No,Self-employed,Urban,68,38,never smoked,1,Adult,Obesity,Low
+37726,Female,80.0,1,0,Yes,Self-employed,Urban,69,26,Unknown,1,Senior,Overweight,Low
+54385,Male,45.0,0,0,Yes,Private,Rural,64,29,never smoked,1,Adult,Overweight,Low
+2458,Female,78.0,0,0,Yes,Private,Rural,236,32,never smoked,1,Senior,Obesity,Diabetic
+35512,Female,70.0,0,0,Yes,Self-employed,Rural,76,24,formerly smoked,1,Senior,Healthy Weight,Healthy
+56841,Male,58.0,0,1,Yes,Private,Rural,241,31,smokes,1,Adult,Obesity,Diabetic
+8154,Male,57.0,1,0,Yes,Govt_job,Urban,79,28,formerly smoked,1,Adult,Overweight,Healthy
+4639,Female,69.0,0,0,Yes,Govt_job,Urban,83,28,never smoked,1,Senior,Overweight,Healthy
+12363,Male,64.0,0,1,Yes,Govt_job,Urban,74,29,Unknown,1,Adult,Overweight,Healthy
+63973,Female,77.0,0,0,Yes,Govt_job,Rural,190,31,never smoked,1,Senior,Obesity,Pre-Diabetic
+45277,Female,74.0,0,0,Yes,Private,Rural,232,35,formerly smoked,1,Senior,Obesity,Diabetic
+4712,Female,81.0,0,1,Yes,Self-employed,Rural,79,19,Unknown,1,Senior,Healthy Weight,Healthy
+33175,Female,57.0,0,0,Yes,Govt_job,Urban,111,28,Unknown,1,Adult,Overweight,Healthy
+2346,Male,58.0,0,0,Yes,Private,Urban,82,33,smokes,1,Adult,Obesity,Healthy
+42072,Female,50.0,1,0,Yes,Private,Rural,73,30,formerly smoked,1,Adult,Obesity,Healthy
+12062,Female,54.0,0,0,Yes,Self-employed,Rural,192,40,smokes,1,Adult,Obesity,Pre-Diabetic
+30456,Female,79.0,0,0,Yes,Private,Rural,93,24,never smoked,1,Senior,Healthy Weight,Healthy
+59125,Female,53.0,0,0,Yes,Govt_job,Urban,64,42,never smoked,1,Adult,Obesity,Low
+56546,Male,79.0,0,1,Yes,Private,Rural,130,23,formerly smoked,1,Senior,Healthy Weight,Healthy
+48405,Male,80.0,0,1,Yes,Private,Urban,69,24,smokes,1,Senior,Healthy Weight,Low
+36706,Female,76.0,0,0,Yes,Self-employed,Urban,106,27,formerly smoked,1,Senior,Overweight,Healthy
+41069,Female,45.0,0,0,Yes,Private,Rural,224,57,never smoked,1,Adult,Obesity,Diabetic
+71639,Female,68.0,0,0,No,Govt_job,Urban,82,27,Unknown,1,Senior,Overweight,Healthy
+53401,Male,71.0,1,1,No,Govt_job,Rural,217,31,never smoked,1,Senior,Obesity,Diabetic
+60744,Male,61.0,1,0,Yes,Self-employed,Rural,76,27,smokes,1,Adult,Overweight,Healthy
+7547,Male,74.0,0,0,Yes,Private,Urban,73,31,smokes,1,Senior,Obesity,Healthy
+31720,Female,38.0,0,0,No,Self-employed,Urban,82,24,formerly smoked,1,Adult,Healthy Weight,Healthy
+5563,Female,77.0,0,0,Yes,Private,Urban,105,31,never smoked,1,Senior,Obesity,Healthy
+68798,Female,58.0,0,0,Yes,Private,Rural,60,28,formerly smoked,1,Adult,Overweight,Low
+72918,Female,53.0,1,0,Yes,Private,Urban,63,30,Unknown,1,Adult,Obesity,Low
+13491,Male,80.0,0,0,Yes,Private,Rural,260,32,smokes,1,Senior,Obesity,Diabetic
+44033,Male,56.0,1,0,Yes,Private,Rural,249,36,never smoked,1,Adult,Obesity,Diabetic
+14164,Female,72.0,0,0,Yes,Private,Urban,220,33,Unknown,1,Senior,Obesity,Diabetic
+50522,Female,72.0,0,0,Yes,Govt_job,Urban,131,28,never smoked,1,Senior,Overweight,Healthy
+3352,Male,78.0,1,0,Yes,Self-employed,Urban,93,28,formerly smoked,1,Senior,Overweight,Healthy
+70943,Female,80.0,0,0,Yes,Private,Urban,74,24,Unknown,1,Senior,Healthy Weight,Healthy
+37132,Male,82.0,0,0,Yes,Govt_job,Urban,201,29,formerly smoked,1,Senior,Overweight,Diabetic
+48796,Female,75.0,0,0,Yes,Govt_job,Urban,62,28,Unknown,1,Senior,Overweight,Low
+53440,Female,73.0,1,0,Yes,Private,Rural,190,36,never smoked,1,Senior,Obesity,Pre-Diabetic
+16817,Female,78.0,1,0,No,Private,Urban,131,20,never smoked,1,Senior,Healthy Weight,Healthy
+69551,Male,69.0,1,0,No,Private,Rural,183,36,never smoked,1,Senior,Obesity,Pre-Diabetic
+31563,Female,38.0,0,0,Yes,Private,Rural,101,27,formerly smoked,1,Adult,Overweight,Healthy
+20387,Female,68.0,1,0,Yes,Self-employed,Rural,206,27,never smoked,1,Senior,Overweight,Diabetic
+71279,Female,71.0,0,0,Yes,Govt_job,Urban,263,39,never smoked,1,Senior,Obesity,Diabetic
+55824,Male,76.0,0,0,Yes,Private,Urban,140,30,formerly smoked,1,Senior,Obesity,Pre-Diabetic
+11762,Female,76.0,0,0,Yes,Private,Urban,207,35,Unknown,1,Senior,Obesity,Diabetic
+29281,Male,76.0,1,0,Yes,Self-employed,Rural,194,27,formerly smoked,1,Senior,Overweight,Pre-Diabetic
+30683,Female,75.0,0,0,Yes,Private,Rural,199,27,Unknown,1,Senior,Overweight,Pre-Diabetic
+20439,Male,82.0,0,1,Yes,Govt_job,Rural,104,25,never smoked,1,Senior,Overweight,Healthy
+45965,Female,59.0,0,0,Yes,Private,Rural,116,24,smokes,1,Adult,Healthy Weight,Healthy
+8045,Female,74.0,1,0,Yes,Private,Urban,70,22,never smoked,1,Senior,Healthy Weight,Healthy
+37651,Female,69.0,1,1,No,Self-employed,Urban,72,37,never smoked,1,Senior,Obesity,Healthy
+17308,Female,72.0,1,0,Yes,Private,Urban,222,30,never smoked,1,Senior,Obesity,Diabetic
+67981,Male,66.0,0,0,Yes,Private,Urban,151,28,formerly smoked,1,Senior,Overweight,Pre-Diabetic
+41241,Male,65.0,0,0,Yes,Self-employed,Urban,68,30,formerly smoked,1,Senior,Obesity,Low
+62861,Female,78.0,0,0,Yes,Private,Urban,67,25,never smoked,1,Senior,Overweight,Low
+72081,Female,57.0,1,0,Yes,Govt_job,Rural,67,33,never smoked,1,Adult,Obesity,Low
+58978,Female,70.0,0,1,Yes,Private,Rural,239,26,never smoked,1,Senior,Overweight,Diabetic
+11933,Female,79.0,0,0,Yes,Private,Rural,170,29,Unknown,1,Senior,Overweight,Pre-Diabetic
+46703,Male,68.0,0,1,Yes,Private,Urban,224,32,formerly smoked,1,Senior,Obesity,Diabetic
+32503,Female,80.0,0,0,Yes,Self-employed,Urban,77,34,never smoked,1,Senior,Obesity,Healthy
+12482,Male,68.0,0,0,Yes,Self-employed,Urban,78,28,smokes,1,Senior,Overweight,Healthy
+56939,Female,55.0,0,0,Yes,Self-employed,Rural,93,26,never smoked,1,Adult,Overweight,Healthy
+24669,Female,77.0,0,1,Yes,Private,Rural,232,37,never smoked,1,Senior,Obesity,Diabetic
+43054,Female,50.0,0,0,Yes,Private,Rural,102,31,smokes,1,Adult,Obesity,Healthy
+59437,Female,57.0,0,0,Yes,Private,Urban,222,37,smokes,1,Adult,Obesity,Diabetic
+66258,Female,71.0,0,0,Yes,Self-employed,Urban,196,34,formerly smoked,1,Senior,Obesity,Pre-Diabetic
+34567,Female,81.0,1,0,Yes,Self-employed,Rural,74,25,never smoked,1,Senior,Overweight,Healthy
+50931,Female,76.0,0,0,Yes,Private,Urban,58,27,formerly smoked,1,Senior,Overweight,Low
+16590,Male,71.0,0,1,Yes,Private,Urban,82,29,smokes,1,Senior,Overweight,Healthy
+69768,Female,1.32,0,0,No,children,Urban,70,18,Unknown,1,Children,Underweight,Healthy
+20426,Female,78.0,1,0,No,Private,Urban,204,46,never smoked,1,Senior,Obesity,Diabetic
+3512,Female,70.0,1,0,Yes,Self-employed,Urban,89,34,formerly smoked,1,Senior,Obesity,Healthy
+42899,Male,78.0,0,0,Yes,Self-employed,Urban,133,24,formerly smoked,1,Senior,Healthy Weight,Healthy
+63453,Female,56.0,0,0,Yes,Govt_job,Rural,162,27,Unknown,1,Adult,Overweight,Pre-Diabetic
+43364,Male,79.0,1,0,Yes,Private,Rural,75,29,never smoked,1,Senior,Overweight,Healthy
+44993,Female,79.0,1,0,No,Govt_job,Urban,98,22,formerly smoked,1,Senior,Healthy Weight,Healthy
+210,Male,81.0,0,0,Yes,Self-employed,Rural,92,31,never smoked,1,Senior,Obesity,Healthy
+28939,Male,64.0,0,0,Yes,Self-employed,Rural,112,29,formerly smoked,1,Adult,Overweight,Healthy
+60739,Female,79.0,1,1,No,Self-employed,Rural,61,26,never smoked,1,Senior,Overweight,Low
+67432,Female,60.0,0,0,Yes,Private,Urban,97,26,smokes,1,Adult,Overweight,Healthy
+2182,Female,80.0,1,0,Yes,Self-employed,Rural,91,33,formerly smoked,1,Senior,Obesity,Healthy
+40899,Female,78.0,0,0,Yes,Self-employed,Rural,61,25,formerly smoked,1,Senior,Overweight,Low
+14431,Male,72.0,1,0,Yes,Self-employed,Rural,185,37,never smoked,1,Senior,Obesity,Pre-Diabetic
+62466,Female,80.0,0,0,Yes,Private,Urban,64,45,never smoked,1,Senior,Obesity,Low
+36841,Male,78.0,1,0,Yes,Self-employed,Rural,56,26,formerly smoked,1,Senior,Overweight,Low
+33486,Female,80.0,0,0,Yes,Govt_job,Urban,111,27,Unknown,1,Senior,Overweight,Healthy
+65105,Male,81.0,0,0,Yes,Private,Urban,213,26,Unknown,1,Senior,Overweight,Diabetic
+54567,Female,46.0,0,0,Yes,Private,Urban,78,31,never smoked,1,Adult,Obesity,Healthy
+66204,Male,59.0,0,0,Yes,Private,Urban,111,32,formerly smoked,1,Adult,Obesity,Healthy
+39912,Female,32.0,0,0,Yes,Private,Rural,76,30,smokes,1,Adult,Obesity,Healthy
+8003,Female,77.0,0,0,No,Private,Urban,81,27,Unknown,1,Senior,Overweight,Healthy
+28378,Male,61.0,1,1,Yes,Private,Urban,112,37,smokes,1,Adult,Obesity,Healthy
+41081,Male,63.0,0,0,Yes,Private,Rural,137,32,formerly smoked,1,Adult,Obesity,Healthy
+16077,Male,63.0,0,1,Yes,Self-employed,Urban,117,34,formerly smoked,1,Adult,Obesity,Healthy
+67895,Female,82.0,1,1,Yes,Govt_job,Urban,216,28,formerly smoked,1,Senior,Overweight,Diabetic
+30184,Male,82.0,0,0,Yes,Private,Rural,87,30,formerly smoked,1,Senior,Obesity,Healthy
+66955,Male,61.0,0,1,Yes,Private,Urban,210,37,Unknown,1,Adult,Obesity,Diabetic
+24905,Female,65.0,0,0,Yes,Private,Urban,206,46,formerly smoked,1,Senior,Obesity,Diabetic
+66071,Male,51.0,1,0,Yes,Private,Urban,112,42,formerly smoked,1,Adult,Obesity,Healthy
+36255,Male,59.0,0,0,Yes,Self-employed,Rural,118,36,smokes,1,Adult,Obesity,Healthy
+69112,Male,68.0,1,1,Yes,Private,Rural,272,31,smokes,1,Senior,Obesity,Diabetic
+23410,Female,72.0,0,0,Yes,Private,Rural,98,27,smokes,1,Senior,Overweight,Healthy
+64373,Male,59.0,0,0,Yes,Private,Urban,201,36,formerly smoked,1,Adult,Obesity,Diabetic
+58267,Male,70.0,1,0,Yes,Private,Rural,243,46,formerly smoked,1,Senior,Obesity,Diabetic
+35684,Male,69.0,0,0,Yes,Private,Rural,94,28,Unknown,1,Senior,Overweight,Healthy
+18937,Male,79.0,0,0,Yes,Private,Rural,115,29,formerly smoked,1,Senior,Overweight,Healthy
+491,Female,74.0,0,0,Yes,Self-employed,Urban,75,27,never smoked,1,Senior,Overweight,Healthy
+54695,Male,74.0,0,0,Yes,Private,Urban,167,30,Unknown,1,Senior,Obesity,Pre-Diabetic
+68627,Male,80.0,1,1,Yes,Private,Urban,175,32,formerly smoked,1,Senior,Obesity,Pre-Diabetic
+8580,Female,77.0,0,0,Yes,Self-employed,Rural,90,32,never smoked,1,Senior,Obesity,Healthy
+28484,Female,78.0,0,0,Yes,Self-employed,Rural,109,31,never smoked,1,Senior,Obesity,Healthy
+62019,Male,54.0,0,0,Yes,Govt_job,Rural,88,31,smokes,1,Adult,Obesity,Healthy
+51314,Female,78.0,0,0,Yes,Private,Urban,107,33,formerly smoked,1,Senior,Obesity,Healthy
+37060,Female,81.0,0,0,Yes,Private,Rural,80,23,never smoked,1,Senior,Healthy Weight,Healthy
+35578,Male,78.0,0,0,No,Self-employed,Urban,90,27,never smoked,1,Senior,Overweight,Healthy
+54921,Male,78.0,1,0,Yes,Self-employed,Rural,135,34,Unknown,1,Senior,Obesity,Healthy
+33454,Female,63.0,0,0,Yes,Govt_job,Rural,107,24,Unknown,1,Adult,Healthy Weight,Healthy
+33943,Female,39.0,0,0,Yes,Private,Urban,83,26,never smoked,1,Adult,Overweight,Healthy
+62439,Female,51.0,0,0,Yes,Govt_job,Rural,103,27,formerly smoked,1,Adult,Overweight,Healthy
+31179,Male,63.0,0,0,Yes,Private,Urban,209,31,never smoked,1,Adult,Obesity,Diabetic
+66866,Female,48.0,0,0,Yes,Private,Urban,74,20,never smoked,1,Adult,Healthy Weight,Healthy
+2548,Female,81.0,0,0,Yes,Self-employed,Urban,96,22,never smoked,1,Senior,Healthy Weight,Healthy
+68025,Female,79.0,0,1,No,Private,Urban,205,31,smokes,1,Senior,Obesity,Diabetic
+2390,Male,78.0,0,0,Yes,Self-employed,Urban,116,27,never smoked,1,Senior,Overweight,Healthy
+29552,Female,55.0,1,1,Yes,Private,Urban,210,40,smokes,1,Adult,Obesity,Diabetic
+25904,Female,76.0,1,1,Yes,Self-employed,Urban,200,31,smokes,1,Senior,Obesity,Diabetic
+31421,Male,73.0,0,1,Yes,Govt_job,Rural,220,29,never smoked,1,Senior,Overweight,Diabetic
+20463,Male,81.0,1,1,Yes,Private,Urban,251,28,smokes,1,Senior,Overweight,Diabetic
+68023,Male,79.0,0,0,Yes,Private,Rural,73,28,never smoked,1,Senior,Overweight,Healthy
+12689,Female,63.0,0,0,Yes,Govt_job,Rural,205,42,formerly smoked,1,Adult,Obesity,Diabetic
+54724,Female,81.0,0,0,No,Govt_job,Urban,70,26,smokes,1,Senior,Overweight,Healthy
+8899,Male,49.0,0,0,No,Private,Rural,105,32,smokes,1,Adult,Obesity,Healthy
+39186,Female,57.0,0,1,Yes,Private,Urban,217,31,Unknown,1,Adult,Obesity,Diabetic
+32729,Female,81.0,0,0,Yes,Private,Rural,184,28,never smoked,1,Senior,Overweight,Pre-Diabetic
+39105,Male,74.0,0,0,Yes,Self-employed,Rural,61,28,never smoked,1,Senior,Overweight,Low
+31154,Female,39.0,0,0,Yes,Self-employed,Urban,98,30,smokes,1,Adult,Obesity,Healthy
+69959,Female,80.0,1,0,No,Private,Urban,66,35,never smoked,1,Senior,Obesity,Low
+10552,Female,81.0,0,0,Yes,Self-employed,Rural,82,17,never smoked,1,Senior,Underweight,Healthy
+12917,Female,79.0,0,0,Yes,Private,Urban,98,22,smokes,1,Senior,Healthy Weight,Healthy
+68356,Female,73.0,0,0,Yes,Self-employed,Urban,71,34,never smoked,1,Senior,Obesity,Healthy
+23368,Female,77.0,1,0,Yes,Self-employed,Urban,200,28,formerly smoked,1,Senior,Overweight,Diabetic
+25974,Male,78.0,0,0,Yes,Self-employed,Urban,218,27,Unknown,1,Senior,Overweight,Diabetic
+1210,Female,68.0,0,0,Yes,Private,Rural,211,39,Unknown,1,Senior,Obesity,Diabetic
+28493,Male,57.0,0,0,Yes,Private,Urban,86,32,Unknown,1,Adult,Obesity,Healthy
+36857,Male,77.0,0,0,Yes,Self-employed,Rural,162,33,formerly smoked,1,Senior,Obesity,Pre-Diabetic
+1836,Female,51.0,1,0,Yes,Private,Urban,88,28,never smoked,1,Adult,Overweight,Healthy
+32221,Male,60.0,0,1,Yes,Private,Urban,92,36,smokes,1,Adult,Obesity,Healthy
+10548,Male,66.0,0,0,Yes,Private,Rural,76,21,formerly smoked,1,Senior,Healthy Weight,Healthy
+52282,Male,57.0,0,0,Yes,Private,Rural,197,34,formerly smoked,1,Adult,Obesity,Pre-Diabetic
+45535,Male,68.0,0,0,Yes,Private,Rural,234,42,never smoked,1,Senior,Obesity,Diabetic
+40460,Female,68.0,1,1,Yes,Private,Urban,248,40,formerly smoked,1,Senior,Obesity,Diabetic
+17739,Male,57.0,0,0,Yes,Private,Rural,85,37,Unknown,1,Adult,Obesity,Healthy
+49669,Female,14.0,0,0,No,children,Rural,58,31,Unknown,1,Youth,Obesity,Low
+27153,Female,75.0,0,0,Yes,Self-employed,Rural,79,29,formerly smoked,1,Senior,Overweight,Healthy
+34060,Male,71.0,1,0,Yes,Self-employed,Rural,88,29,Unknown,1,Senior,Overweight,Healthy
+43424,Female,78.0,0,0,Yes,Private,Rural,79,20,Unknown,1,Senior,Healthy Weight,Healthy
