@@ -20,14 +20,14 @@ Predicting the occurence of stroke in individuals using demographic and health-r
     ├── README.md
     └── .gitignore
 
-- Data: Contains the raw, processed and final data. 
-- Experiments: A folder for experiments.
-- Images: A folder containing final images.
-- Models: A folder containing trained models or model predictions.
+- Data: raw, processed and final data. 
+- Experiments: Experiments.
+- Images: Final images.
+- Models: Trained models or model predictions.
 - Reports: Generated HTML, PDF etc. of the analysis report.
 - src: Project source code.
 - README: This file. 
-- .gitignore: Files to exclude from this folder (e.g., large data files).
+- .gitignore: Files to exclude from this folder.
 
 ## Team Members
 - Joshua Okojie
@@ -40,8 +40,10 @@ Predicting the occurence of stroke in individuals using demographic and health-r
 ## Project Overview
 - [Purpose and Overview](#purpose-and-overview)
 - [Methodology](#methodology)
-- [Exploratory Data Analysis](#data-exploration)
-- Findings and Visualization Analysis
+- [Data Analysis](#data-exploration)
+- [Predictive Model](#predictive-model)
+- [Technical Stack](#technical-stack)
+- [Team Member´s Videos](#team-members-videos)
 - [References](#references)
 
 ## Purpose and Overview
@@ -68,16 +70,16 @@ After a preliminary analysis of the dataset we classify the attributes (columns)
 | Feature        | Type                                                                 | Description                                                                 |
 |----------------|----------------------------------------------------------------------|-----------------------------------------------------------------------------|
 | id             | Integer, unique                                                      | Unique identifier for each patient                                          |
-| gender         | String, binary (male/female)                                         | "Male", "Female", or "Other"                                                |
+| gender         | String, binary                                          | "Male", "Female", or "Other"                                                |
 | age            | Integer                                                              | Age of the patient                                                          |
 | hypertension   | Integer, binary (0/1)                                                | 0 = patient does not have hypertension; 1 = patient has hypertension        |
 | heart_disease  | Integer, binary (0/1)                                                | 0 = patient does not have heart disease; 1 = patient has heart disease      |
-| ever_married   | String, binary (yes/no)                                              | "Yes" or "No"                                                               |
-| work_type      | String, non-binary (children, Govt_job, Never_worked, Private, Self-employed) | Patient’s type of work: "children", "Govt_job", "Never_worked", "Private", or "Self-employed" |
-| residence      | String, binary (urban/rural)                                         | "Urban" or "Rural"                                                          |
+| ever_married   | String, binary                                               | "Yes" or "No"                                                               |
+| work_type      | String, non-binary  | Patient’s type of work: "children", "Govt_job", "Never_worked", "Private", or "Self-employed" |
+| residence      | String, binary                                          | "Urban" or "Rural"                                                          |
 | avg_glucose    | Float (2 decimal places)                                             | Average glucose level in blood                                              |
 | bmi            | Float (1 decimal place)                                              | Body Mass Index                                                             |
-| smoking_status | String, non-binary (formerly smoked, never smoked, smokes, Unknown)  | "Formerly smoked", "Never smoked", "Smokes", or "Unknown"*                  |
+| smoking_status | String, non-binary   | "Formerly smoked", "Never smoked", "Smokes", or "Unknown"*                  |
 | stroke         | Integer, binary (0/1)                                                | 1 = patient had a stroke; 0 = patient did not have a stroke                 |
 
 *Note: "Unknown" in smoking_status means that the information is unavailable for this patient.*
@@ -95,13 +97,15 @@ After a preliminary analysis of the dataset we classify the attributes (columns)
 - After careful consideration and analysis, and taking into account the different types of data each column provides, we handle them as follows:
   - BMI missing values (NaN) represent 201 observations, which corresponds to 4% of the dataset. This is within the acceptable range for using imputation with minimal risk to the dataset. Furthermore, the data is considered Missing Not at Random (MNAR) because it depends on the respondents’ willingness to disclose their weight.
 
-  However, the BMI column has a minimum value of 10.3 and a maximum value of 97.6, with a mean of 28.8. Because of the large gap between these values, we decided to handle the missing data in this column through imputation using KNN with a number of neighbords = 9.
+    However, the BMI column has a minimum value of 10.3 and a maximum value of 97.6, with a mean of 28.8. Because of the large gap between these values, we decided to handle the missing data in this column through imputation using KNN with a number of neighbords = 9.
+
+    ![Data Imputation with KNN](images/stroke_comparative_visualizations/data_imputation_KNN.png)
 
   - The smoking_status value “Unknown” represents 1,544 observations, which corresponds to 30% of the dataset. In addition, this attribute only allows three answer options: never smoked, formerly smoked, and smokes.
 
-  Since missing data greater than 10% can introduce bias into statistical analysis, and more advanced imputation methods are usually required for larger percentages of missing data, we decided not to use imputation in this case. Furthermore, the data is considered Missing Not at Random (MNAR) because it depends on the respondents’ willingness to disclose their smoking status.
+    Since missing data greater than 10% can introduce bias into statistical analysis, and more advanced imputation methods are usually required for larger percentages of missing data, we decided not to use imputation in this case. Furthermore, the data is considered Missing Not at Random (MNAR) because it depends on the respondents’ willingness to disclose their smoking status.
 
-  Therefore, missing data will be treated as its own category, with “Unknown” used as a fourth category.
+    Therefore, missing data will be treated as its own category, with “Unknown” used as a fourth category.
 
 ##### Standardization
 - The Residence column title was capitalized while other column titles were not; this was corrected.
@@ -111,7 +115,7 @@ After a preliminary analysis of the dataset we classify the attributes (columns)
 
 #### Identifying correlations: Preliminary visualization of data to understand patterns, correlations and data distribution (insert link to Graphs Lindsay and Mary)
 
-- How many observations with stroke we have? (insert the first graphic)
+  ![Observations with stroke](images/stroke_comparative_visualizations/comparative_total.png)
 
 - After extract the observations with stroke we figuraud a big imbalances in the dataset, we only found: 249 obervations with stroke. It means only 4.9% of the observations and two of them was pediatric population.  
 
@@ -123,16 +127,22 @@ After a preliminary analysis of the dataset we classify the attributes (columns)
   - 18.5>25 Healthy Weight
   - 25>=30: Overweight
   - => 30 Obesity
+ ![Stroke by BMI](images/Stroke%20Positive%20Visualizations/stroke_patients_by_bmi.png)
+
 - The big diference between average glucose level with min value in 55, and max value in 271, was an issue as well, after remove the pediatric population, we decide to use the American Diabetes Asociation  clasification (5):  
   - les tan 70 mg/dl: Low glucosa level
   - 70 yo 140 mg/dl Healthy Value
   - 141 to 199 mg/dl: prediabetes or oral glucose intolerance.
   - More than 200 mg/dl: Diabetes.
+
+  ![stroke by gluc level](images/Stroke%20Positive%20Visualizations/stroke_patients_by_glucose.png)
+
 - We used the canadian clasification for age (6), excluding children categorie and asuming the impact on the youth categorie after exclude observations with less than 18 years old:
   - children 0-14 years old 
   - youth 15-25 years old
   - Adult 25 to 64 years old
   - Senior 65 and more years old
+ 
 
 
 ## Data Analysis
@@ -144,38 +154,57 @@ After a preliminary analysis of the dataset we classify the attributes (columns)
     - From the total observations, 41.4% of them was men and 58.6% was women.
     - From our 249 observations of stroke, 43.4% of them was men and 56.6% was women.
 
+  ![stroke comparaative by gender](images/stroke_comparative_visualizations/comparative_by_gender.png)
+
   - Age: we could observed a increase of stroke incidence after 57 years old with a peak after 78 years  old.
+
+  ![age peak](images/Stroke%20Positive%20Visualizations/stroke_patients_by_age.png)
+
     - 31.7% of observations had 57 or more years old and 68.3% had less than 57 years old.
     - --- % was children between 0-14 years old
     - --- % was youth between 15-25 years old
     - ----%was Adult between 25 to 64 years old
     - ---- % was Senior between 65 and more years old
 
+![age means](images/stroke_comparative_visualizations/comparative_by_age_category.png)
+
 - Mutable demographic characteristics:
+![mutab demog feat](images/Stroke%20Positive%20Visualizations/stroke_patients_categorical(2).png)
   - Marital status:
   -
     - Stroke: 88.4% was married and 11.6%% was never merried, however, --% of stroke observation had more than--years old, therefore, it is an inbalance of categorie and is dificult to make a conclution here.
+
+    ![stroke by married](images/Stroke%20Positive%20Visualizations/stroke_patients_categorical(1).png)
 
     - Setting: --% living in urban setting and --%  in city
     - Type of work: Where worked people with stroke?
 
 - Immutable Risk:
+ ![stroke comorb](images/Stroke%20Positive%20Visualizations/stroke_patients_comorbidity.png)
+
   - HTA: ---% of patients with stroke has HTA,  and % of patients without a stroke  have it.
   - Heart_disease --- % of patients with stroke has HTA and % of patientes without stroke have it.
  We found that patients with stroke use to have more % of HTA and HD?
 
+ ![stroke compar comorb](images/stroke_comparative_visualizations/comparative_by_comorb.png)
+
 - Mutable Risk Factors:
   - Glucose average: Acording with the American society of diabetes clasification, and in base of glucose average, %-- of the patients had an average in the diagnosis range of diabetes that was not reported in the dataset information or used as charactertistic, also, % had an average of glucose in   oral glucose intolerance and only %--- have a normal value.
+
+  ![stroke with gluc](images/Stroke%20Positive%20Visualizations/stroke_patients_by_glucose.png)
+
     - when we compare with patients without stroke, only---% of then had glucose average in diabetic range, % in oral glucose intolerance and %.--- had a normal value.
+
+
+![stroke comp gluc](images/stroke_comparative_visualizations/comparative_by_gluc_category.png)
 
   - BMI: Using the BMI clasification from CDC, from patients with stroke,  ---% had Obesity, --% had  Overweight, --% had Healthy Weight and %.. had Underweight, the % of patients without stroke %---
   
+  ![stroke comp bmi](images/stroke_comparative_visualizations/comparative_by_bmi.png)
+
   - Stroke and smoke: when we compare the porcentage of patient with stroke who are "smokes and formerly smoked", it is a biger percent of patients without stroke?
-  - to keep in mind: 40 observation with stroke and smoking status unknown.
-  - “formerly smoked"
-  - "never smoked"
-  - "smokes"
-  - "Unknown
+
+![stroke comp smoke](images/stroke_comparative_visualizations/comparative_by_smok_stat.png)
 
 
 ### Statistical Analysis (insert link to data_analyst file):
@@ -187,6 +216,8 @@ A test of independence was conducted to determine which features were significan
 The features of age, smoking status, glucose level, hypertension, heart disease, work type, and BMI were all significant (p-value , <0.05) and were included in training the model. The features of gender, residence type, and marriage status were excluded from training the model. Gender (p-value > 0.05) and residence type (p-value > 0.05) were not significant and thus excluded from the model based on their lack of impact. Marriage status was significant (p-value < 0.05) however, due to the significance of age among stroke patients, and the influence of age on marriage status (ie. older individuals are more likely to be married). There were concerns that including marital status could lead to an overestimation of its effect, since age acts as a confounding factor for this variable. After a statistical analyst , adjusting married status by age the difference was not significant (p-value > 0.05), and the first result was explained  due to the significance of age among stroke patients, the decision was made to exclude it from the model. 
 
 ##### Final selection of features for model:
+
+![stroke factors](images/Stroke%20Positive%20Visualizations/stroke_patients_bubble.png)
 
 - Exclude Features: Not significant (p-Value >0.5)
   - Gender Type 
@@ -217,6 +248,8 @@ To ensure the reliability of the analysis, we will apply data splitting techniqu
 
 In addition, the project will provide insights and recommendations to highlight which groups of individuals may benefit most from prevention campaigns and healthy lifestyle strategies based on the findings.
 
+![model](images/Model%20Visualizations/model_3_visualization.png)
+
 ### Stakeholders
 
 - Health Providers
@@ -238,14 +271,9 @@ In addition, the project will provide insights and recommendations to highlight 
 
   - Healthy food industries: companies focused on nutrition and dietary products that support stroke prevention.
 
-## Understanding the Data
-With a clean dataset, we began exploring trends and patterns using summary statistics and visualizations.
 
 
-- What value does your project bring to the industry?
-- How will you answer your business question with your chosen dataset?
-- What are the risks and uncertainties?
-- What methods and technologies will you use?
+
 
 ## Technical stack
 
@@ -281,3 +309,10 @@ With a clean dataset, we began exploring trends and patterns using summary stati
 - Dong Y, Peng CY. Principled missing data methods for researchers. Springerplus. 2013 May 14;2(1):222. doi: 10.1186/2193-1801-2-222. PMID: 23853744; PMCID: PMC3701793.
 - Junaid, K.P., Kiran, T., Gupta, M. et al. How much missing data is too much to impute for longitudinal health indicators? A preliminary guideline for the choice of the extent of missing proportion to impute with multiple imputation by chained equations. Popul Health Metrics 23, 2 (2025). <https://doi.org/10.1186/s12963-025-00364-2>
 <https://python-graph-gallery.com/>
+
+
+
+- What value does your project bring to the industry?
+- How will you answer your business question with your chosen dataset?
+- What are the risks and uncertainties?
+- What methods and technologies will you use?
