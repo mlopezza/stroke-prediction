@@ -61,12 +61,14 @@ Our job is to characterize individuals at the highest risk of stroke based on de
 
 We worked with the Stroke Prediction [Dataset](https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset), which is public through kaggle. It consists of 5.110 observations with 11 attributes between demographic and possible risk factors like health comorbidities and lifestyle information, including the variable ‘stroke’ which is 1 if the patient had a stroke or 0 if not.
 
-After a preliminary analysis of the dataset we classify the attributes (columns) in four big groups defined as:
+After a preliminary analysis of the dataset we classified the attributes (columns) in four big groups defined as:
 
 - Immutable demographic characteristics: Demographic characteristics that are not changeable like gender and age.
 - Mutable demographic characteristics: Demographic characteristics that are potentially changeable like marital status, work and residence type.
 - Immutable Risk: aspects related to the individual that could be related with major risk of stroke and are not alterable like chronic comorbidities: heart disease and hypertension.
 - Mutable Risk Factors: aspects related to the individual lifestyle that could be related with major risk of stroke and are alterable like average glucose level, body mass index and smoking status.
+
+Being focused on prevention, dividing the attributes into mutable and immutable categories allows for the identification of features that can be changed through clinical and lifestyle intervention.
 
 #### Features description:
 
@@ -95,12 +97,12 @@ _Note: "Unknown" in smoking_status means that the information is unavailable for
 
 ##### Missing Values
 
-- It was found some 'N/A' values in 'bmi' column, and 'unknowns' in 'smoking_status' column (data unavailable for patient).
-- After careful consideration and analysis, and taking into account the different types of data each column provides, we handle them as follows:
+- A review of the dataset identified some 'N/A' values in the 'bmi' column, and 'unknowns' in the 'smoking_status' column (data unavailable for patient).
+- After careful consideration and analysis, and taking into account the different types of data each column provides, we handled them as follows:
 
   - BMI missing values (NaN) represent 201 observations, which corresponds to 4% of the dataset. This is within the acceptable range for using imputation with minimal risk to the dataset. Furthermore, the data is considered Missing Not at Random (MNAR) because it depends on the respondents’ willingness to disclose their weight.
 
-    However, the BMI column has a minimum value of 10.3 and a maximum value of 97.6, with a mean of 28.8. Because of the large gap between these values, we decided to handle the missing data in this column through imputation using KNN with a number of neighbours equals 9.
+    However, the BMI column has a minimum value of 10.3 and a maximum value of 97.6, with a mean of 28.8. Because of the large gap between these values, we decided to handle the missing data in this column through imputation using KNN with a number of neighbours equal to 9.
 
     ![Data Imputation with KNN](images/stroke_comparative_visualizations/data_imputation_KNN.png)
 
@@ -112,10 +114,26 @@ _Note: "Unknown" in smoking_status means that the information is unavailable for
 
 ##### Standardization
 
-- The Residence column title was capitalized while other column titles were not; this was corrected.
-- Some feature values such as work_type, smoking_status, ever_married, and residence were kept with the first letter capitalized, as in the original dataset.
-- The age column was left with its original number of decimal places because it includes observations of less than one year, which could be altered otherwise.
-- The float types (avg_glucose and bmi) were standardized in terms of the number of decimal places.
+- A review of the dataset indentified numerous inconsistencies within the labels and values such as string capitalization, and float decimal length. These inconsistencies were standardized prior to analysis and are detailed below:
+
+  - The Residence column title was capitalized while other column titles were not; this was corrected.
+  - Some feature values such as work_type, smoking_status, ever_married, and residence were kept with the first letter capitalized, as in the original dataset.
+  - The age column was left with its original number of decimal places because it includes observations of less than one year, which could be altered otherwise.
+  - The float types (avg_glucose and bmi) were standardized in terms of the number of decimal places.
+
+##### Lack of Data Context
+
+- The Kaggle Stroke Prediction Dataset did not provide context regarding data collection methods. This posed challenges for data analysis, and interpretion.
+
+  -For example, it is unknown how data was collected for the average glucose level. There are various types of glucose level measurment tests such as the Oral Glucose Tolerance Test (OGTT) and the Fasting Plasma Glucose (FPG) test. The paramenters for designating blood sugar levels as healthy, pre-diabetic, and diabetic vary signifcantly between the test types. The number of individuals per glucose level category varied depending on the test type parameters. It is impossible to determine the true impacts of glucose level without the appropriate context around testing method. For the purpose of our project we chose to use the OGTT parameters as per the American Diabetes Association as it is the most commonly administered test type, however, this assumption may be incorrect.
+
+  The graph below illustrates the differences between applying the OGTT and FPG parameters to the dataset.
+
+  ![alt text](<images/Stroke Positive Visualizations/data_issue_example.png>)
+
+##### Variation in Values
+
+- The dataset contained multiple columns for ratio attribute types with unique float values. While the precision of these unique values may offer meaningful insight when used to build a model, the precision of these values was detrimental to creating meaningful visualizations (ex. X-axis with a hundred distinct but similar values). To address this issue, we consulted previously validated clinical parameters established by medical associations to determine appropriate parameters for creating categorical bins. These bins (categories) were used to create more meaningful visualizations. Additional details can be found in the subsequent section.
 
 #### Identifying correlations: Preliminary visualization of data to understand patterns, correlations and data distribution (insert link to Graphs Lindsay and Mary)
 
@@ -216,9 +234,9 @@ Selecting relevant features and observations to include in the model, while remo
 
 #### Statistical Analyst of Features
 
-A test of independence was conducted to determine which features were significant among stroke patients. The T-test was applied to continuous numerical variables and the Chi Square was applied on categorical variables . These results helped guide decisions on which features to include in building our predictive stroke model.
+A chi-square test of independence was conducted to determine which features were significant among stroke patients. To employ this test, ratio type features were converetd to categorical using previously validated clinical parameters for age, bmi, and glucose level groups. The T-test was applied to continuous numerical variables and the Chi Square was applied on categorical variables . These results helped guide decisions on which features to include in building our predictive stroke model.
 
-The features of age, smoking status, glucose level, hypertension, heart disease, work type, and BMI were all significant (p-value , <0.05) and were included in training the model. The features of gender, residence type, and marriage status were excluded from training the model. Gender (p-value > 0.05) and residence type (p-value > 0.05) were not significant and thus excluded from the model based on their lack of impact. Marriage status was significant (p-value < 0.05) however, due to the significance of age among stroke patients, and the influence of age on marriage status (ie. older individuals are more likely to be married). There were concerns that including marital status could lead to an overestimation of its effect, since age acts as a confounding factor for this variable. After a statistical analyst , adjusting married status by age the difference was not significant (p-value > 0.05), and the first result was explained due to the significance of age among stroke patients, the decision was made to exclude it from the model.
+The features of age, smoking status, glucose level, hypertension, heart disease, work type, and BMI were all significant (p-value , <0.05) and were included in training the model. The features of gender, residence type, and marriage status were excluded from training the model. Gender (p-value > 0.05) and residence type (p-value > 0.05) were not significant and thus excluded from the model based on their lack of impact. Marriage status was significant (p-value < 0.05) however, due to the significance of age among stroke patients, and the influence of age on marriage status (ie. older individuals are more likely to be married). There were concerns that including marital status could lead to an overestimation of its effect, since age acts as a confounding factor for this variable. After a statistical analysis, adjusting for maritial status by age the difference was not significant (p-value > 0.05), and the first result was explained due to the significance of age among stroke patients, the decision was made to exclude it from the model.
 
 ##### Final selection of features for model
 
@@ -241,11 +259,53 @@ The features of age, smoking status, glucose level, hypertension, heart disease,
 
 ## Predictive Model
 
-- Classification Analysis and Validation: Applying linear classification models to identify individuals aged 18 or older who are most at risk of developing stroke, based on the selected features. Additionally, creating training and test sets and assessing model accuracy.
+### Model Purpose
 
-- Visualization: Creating plots to represent insights and model results.
+- The purpose of the developed model was to identify individuals aged 18 or older who are most at risk of developing stroke, based on the selected features of smoking status, age, glucose level, hypertension, heart disease, work type, and bmi. These individuals could then receieve preventative interventions targeting mutuable risk features.
 
-- Conclusion
+### Building the Model
+
+- All individuals under the age of 18 were removed from the dataset.
+- Following the removal of child and youth patients, the stroke positive group consisted of 247 patients.
+- A random sample of 247 patients from the stroke negative group was selected.
+- The stroke positive and negative patient groups were then combined for a total dataset of 494 patients with a 50/50 split.
+- The categorical features of smoking status, work type, hypertension, and heart disease were one-hot encoded, while the features of age, glucose level, and bmi were used in their ratio state.
+
+- A simple logistical regression model with 10-fold cross validation (random state value of 42) was trained and tested on the features.
+
+- Multiple models were experimented with, however model 3 was determined to be the highest performing version.
+
+### Model Performance
+
+-On average the model 3 achieves an F1 score of 0.75, but depending on the fold it's confidene interval ranges between 0.633 and 0.867.
+
+![alt text](<images/Model Visualizations/model_3_visualization.png>)
+
+Recall is consistently around 0.80, meaning the model captures most true positives.
+
+Precision is lower at 0.71, which suggests the model returns some false positives.
+
+The F1 score is about 0.75, which is relatively balanced but skews towards recall. It does a good job of catching stroke patients, but also flags non-stroke patients approximately 30% of the time. False psoitives are more desirable in this instance, as missing a possible stroke case is far more harmful than reccomending healthy lifestyle changes to patients that are not at risk. However, the score still has much room for improvement, and this level of false positives would not be acceptable for other medical conditions which require more invasive interventions.
+
+Accuracy is around 0.74 which is fairly good. The accuracy of the model is high enough for it to be employed as a possible screening tool, but not precise enough for diagnosis purposes. This is acceptable for our project in which screening and early warning is the ultimate goal.
+
+In healthcare we believe it is critical to be transparent regarding range uncertainty. Clinical stakeholders need to see beyond average score when making medical decisions. This transparency will help us build trust with stakeholders.
+
+### Model Conclusion and Next Steps
+
+- Our model could serve as a clincial screening tool to idenitfy adults at risk for stroke and drive low-risk lifestyle change reccomendations such as smoking cessation, weight loss and glucose level managment through dietary and exercise changes, and therapy or activities for stress management. The model should not be used for reccomending moderate to high-risk interventions such as medications. It's level of false positives could result in harm if medications are prescribed to individuals who do not need them.
+
+- Our next steps in refining our model would involve the following:
+
+  Obtaining a larger stroke population dataset and context surrounding data collection methods.
+
+  Identifying possible additional relevant features such as a stress rating score, cholesterol levels etc.
+
+  Leveraging SHAP analysis to understand what features are driving predictions.
+
+  Auditing the model for potential biases, and consider tracking performance across various demographic segmentations. This is crucial to ensure certain groups are not underserved by our model.
+
+  Validating the model on additional external stroke datasets to confirm it performs consistently and reliably.
 
 ## Project Scope
 
@@ -301,7 +361,7 @@ In addition, the project will provide insights and recommendations to highlight 
 ## Team member's videos
 
 - Joshua Okojie
-- Lindsay Hudson
+- Lindsay Hudson: https://drive.google.com/file/d/1u1E-IqdGAs9LuM7lpb5aCkh5Q2tjoLI6/view?usp=sharing
 - Mariluz Lopez Zamora
 
 ## References
