@@ -100,7 +100,7 @@ _Note: "Unknown" in smoking_status means that the information is unavailable for
 
   - BMI missing values (NaN) represent 201 observations, which corresponds to 4% of the dataset. This is within the acceptable range for using imputation with minimal risk to the dataset. Furthermore, the data is considered Missing Not at Random (MNAR) because it depends on the respondents’ willingness to disclose their weight.
 
-    However, the BMI column has a minimum value of 10.3 and a maximum value of 97.6, with a mean of 28.8. Because of the large gap between these values, we decided to handle the missing data in this column through imputation using KNN with a number of neighbords = 9.
+    However, the BMI column has a minimum value of 10.3 and a maximum value of 97.6, with a mean of 28.8. Because of the large gap between these values, we decided to handle the missing data in this column through imputation using KNN with a number of neighbours equals 9.
 
     ![Data Imputation with KNN](images/stroke_comparative_visualizations/data_imputation_KNN.png)
 
@@ -121,11 +121,11 @@ _Note: "Unknown" in smoking_status means that the information is unavailable for
 
 ![Observations with stroke](images/stroke_comparative_visualizations/comparative_total.png)
 
-- After extract the observations with stroke we figuraud a big imbalances in the dataset, we only found: 249 obervations with stroke. It means only 4.9% of the observations and two of them was pediatric population.
+- After extract the observations with stroke we figured a big imbalances in the dataset, we only found: 249 obervations with stroke. It means only 4.9% of the observations and two of them was pediatric population.
 
 - Adjustment for Age and Physiological Differences: After extensive analysis, it was decided to reduce confounding factors associated with age and physiological differences between adults (≥18 years old) and the pediatric population (<18 years old). For example, different tools and reference values are used to determine healthy weight and glucose levels in pediatric populations. Additionally, the incidence of pediatric stroke is estimated at approximately 1.2 to 13 cases per 100,000 children under 18 years old (2). In contrast, adults experience a much higher incidence, with nearly 151 cases per 100,000 individuals per year (3).
 
-- The big difrence between the BMI values, with min value 10.3 and max value 97.6, made difficult the visualization of the correlation Stroke vs. BMI. Further, pedaitric pupulation had a different interpretation of BMI that is based on percentiles and standar deviations, this afect the interpretation of this variable because pediatric observations could be missclasificated as low weight. After exclude the pediatric population we used the BMI classification from the CDC (4):
+- The big difference between the BMI values, with min value 10.3 and max value 97.6, made difficult the visualization of the correlation Stroke vs. BMI. Further, pediatric population had a different interpretation of BMI that is based on percentiles and standard deviations, this affect the interpretation of this variable because pediatric observations could be misclassified as low weight. After exclude the pediatric population we used the BMI classification from the CDC (4):
 
   - <18.5: Underweight
   - 18.5>25 Healthy Weight
@@ -133,16 +133,16 @@ _Note: "Unknown" in smoking_status means that the information is unavailable for
   - => 30 Obesity
     ![Stroke by BMI](images/Stroke%20Positive%20Visualizations/stroke_patients_by_bmi.png)
 
-- The big diference between average glucose level with min value in 55, and max value in 271, was an issue as well, after remove the pediatric population, we decide to use the American Diabetes Asociation clasification (5):
+- The big difference between average glucose level with min value in 55, and max value in 271, was an issue as well, after remove the pediatric population, we decide to use the American Diabetes Association classification (5):
 
-  - les tan 70 mg/dl: Low glucosa level
+  - les tan 70 mg/dl: Low glucose level
   - 70 yo 140 mg/dl Healthy Value
   - 141 to 199 mg/dl: prediabetes or oral glucose intolerance.
   - More than 200 mg/dl: Diabetes.
 
   ![stroke by gluc level](images/Stroke%20Positive%20Visualizations/stroke_patients_by_glucose.png)
 
-- We used the canadian clasification for age (6), excluding children categorie and asuming the impact on the youth categorie after exclude observations with less than 18 years old:
+- We used the canadian classification for age (6), excluding children categories and assuming the impact on the youth categories after exclude observations with less than 18 years old:
   - children 0-14 years old
   - youth 15-25 years old
   - Adult 25 to 64 years old
@@ -158,7 +158,7 @@ _Note: "Unknown" in smoking_status means that the information is unavailable for
     - From the total observations, 41.4% of them was men and 58.6% was women.
     - From our 249 observations of stroke, 43.4% of them was men and 56.6% was women.
 
-  ![stroke comparaative by gender](images/stroke_comparative_visualizations/comparative_by_gender.png)
+  ![stroke comparative by gender](images/stroke_comparative_visualizations/comparative_by_gender.png)
 
   - Age: we could observed a increase of stroke incidence after 57 years old with a peak after 78 years old.
 
@@ -176,7 +176,7 @@ _Note: "Unknown" in smoking_status means that the information is unavailable for
   ![mutab demog feat](<images/Stroke%20Positive%20Visualizations/stroke_patients_categorical(2).png>)
 
   - Marital status:
-  - - Stroke: 88.4% was married and 11.6%% was never merried, however, --% of stroke observation had more than--years old, therefore, it is an inbalance of categorie and is dificult to make a conclution here.
+  - - Stroke: 88.4% was married and 11.6%% was never married, however, --% of stroke observation had more than--years old, therefore, it is an imbalance of categories and is difficult to make a conclusion here.
 
     ![stroke by married](<images/Stroke%20Positive%20Visualizations/stroke_patients_categorical(1).png>)
 
@@ -194,7 +194,7 @@ _Note: "Unknown" in smoking_status means that the information is unavailable for
 
 - Mutable Risk Factors:
 
-  - Glucose average: Acording with the American society of diabetes clasification, and in base of glucose average, %-- of the patients had an average in the diagnosis range of diabetes that was not reported in the dataset information or used as charactertistic, also, % had an average of glucose in oral glucose intolerance and only %--- have a normal value.
+  - Glucose average: According with the American society of diabetes classification, and in base of glucose average, %-- of the patients had an average in the diagnosis range of diabetes that was not reported in the dataset information or used as characteristic, also, % had an average of glucose in oral glucose intolerance and only %--- have a normal value.
 
   ![stroke with gluc](images/Stroke%20Positive%20Visualizations/stroke_patients_by_glucose.png)
 
@@ -202,11 +202,11 @@ _Note: "Unknown" in smoking_status means that the information is unavailable for
 
 ![stroke comp gluc](images/stroke_comparative_visualizations/comparative_by_gluc_category.png)
 
-- BMI: Using the BMI clasification from CDC, from patients with stroke, ---% had Obesity, --% had Overweight, --% had Healthy Weight and %.. had Underweight, the % of patients without stroke %---
+- BMI: Using the BMI classification from CDC, from patients with stroke, ---% had Obesity, --% had Overweight, --% had Healthy Weight and %.. had Underweight, the % of patients without stroke %---
 
 ![stroke comp bmi](images/stroke_comparative_visualizations/comparative_by_bmi.png)
 
-- Stroke and smoke: when we compare the porcentage of patient with stroke who are "smokes and formerly smoked", it is a biger percent of patients without stroke?
+- Stroke and smoke: when we compare the percentage of patient with stroke who are "smokes and formerly smoked", it is a bigger percent of patients without stroke?
 
 ![stroke comp smoke](images/stroke_comparative_visualizations/comparative_by_smok_stat.png)
 
