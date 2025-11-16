@@ -361,7 +361,7 @@ In addition, the project will provide insights and recommendations to highlight 
 ## Team member's videos
 
 - Joshua Okojie
-- Lindsay Hudson
+- Lindsay Hudson: https://drive.google.com/file/d/1u1E-IqdGAs9LuM7lpb5aCkh5Q2tjoLI6/view?usp=sharing
 - Mariluz Lopez Zamora
 
 ## References
