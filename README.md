@@ -31,9 +31,9 @@ Predicting the occurrence of stroke in individuals using demographic and health-
 
 ## Team Members
 
-- Joshua Okojie
+- [Joshua Okojie](https://www.linkedin.com/in/abayomiokojie/)
 - Lindsay Hudson
-- Mariluz Lopez Zamora
+- [Mariluz Lopez Zamora](https://www.linkedin.com/in/mlopezza/)
 
 ## Chosen Dataset: Stroke Prediction Dataset
 
@@ -368,9 +368,9 @@ In addition, the project will provide insights and recommendations to highlight 
 
 ## Team member's videos
 
-- Joshua Okojie : <https://docs.google.com/presentation/d/1ihOe3Sjjh9W96V67kaFtCuPUNT32zLd7/edit?usp=sharing&ouid=109843096425715990334&rtpof=true&sd=true>
+- Joshua Okojie: <https://docs.google.com/presentation/d/1ihOe3Sjjh9W96V67kaFtCuPUNT32zLd7/edit?usp=sharing&ouid=109843096425715990334&rtpof=true&sd=true>
 - Lindsay Hudson: <https://drive.google.com/file/d/1u1E-IqdGAs9LuM7lpb5aCkh5Q2tjoLI6/view?usp=sharing>
-- Mariluz Lopez Zamora
+- Mariluz Lopez Zamora: (https://drive.google.com/file/d/1uY2Y39tO5rV7ygc6WhWArfLtCi0zVn57/view?usp=sharing)
 
 ## References
 
