@@ -1,6 +1,6 @@
 # Stroke Risk Stratification: Identifying vulnerable individuals through data visualization
 
-Predicting the occurence of stroke in individuals using demographic and health-related factors.
+Predicting the occurrence of stroke in individuals using demographic and health-related factors.
 
 ## Type of project
 
@@ -65,12 +65,12 @@ After a preliminary analysis of the dataset we classified the attributes (column
 
 - Immutable demographic characteristics: Demographic characteristics that are not changeable like gender and age.
 - Mutable demographic characteristics: Demographic characteristics that are potentially changeable like marital status, work and residence type.
-- Immutable Risk: aspects related to the individual that could be related with major risk of stroke and are not alterable like chronic comorbidities: heart disease and hypertension.
+- Immutable Risk: aspects related to the individual that could be related with major risk of stroke and are not alterable like chronic comorbidities (heart disease and hypertension).
 - Mutable Risk Factors: aspects related to the individual lifestyle that could be related with major risk of stroke and are alterable like average glucose level, body mass index and smoking status.
 
 Being focused on prevention, dividing the attributes into mutable and immutable categories allows for the identification of features that can be changed through clinical and lifestyle intervention.
 
-#### Features description:
+#### Features description
 
 | Feature        | Type                     | Description                                                                                   |
 | -------------- | ------------------------ | --------------------------------------------------------------------------------------------- |
@@ -114,7 +114,7 @@ _Note: "Unknown" in smoking_status means that the information is unavailable for
 
 ##### Standardization
 
-- A review of the dataset indentified numerous inconsistencies within the labels and values such as string capitalization, and float decimal length. These inconsistencies were standardized prior to analysis and are detailed below:
+- A review of the dataset identified numerous inconsistencies within the labels and values such as string capitalization, and float decimal length. These inconsistencies were standardized prior to analysis and are detailed below:
 
   - The Residence column title was capitalized while other column titles were not; this was corrected.
   - Some feature values such as work_type, smoking_status, ever_married, and residence were kept with the first letter capitalized, as in the original dataset.
@@ -123,9 +123,9 @@ _Note: "Unknown" in smoking_status means that the information is unavailable for
 
 ##### Lack of Data Context
 
-- The Kaggle Stroke Prediction Dataset did not provide context regarding data collection methods. This posed challenges for data analysis, and interpretion.
+- The Kaggle Stroke Prediction Dataset did not provide context regarding data collection methods. This posed challenges for data analysis, and interpretation.
 
-  For example, it is unknown how data was collected for the average glucose level. There are various types of glucose level measurment tests such as the Oral Glucose Tolerance Test (OGTT) and the Fasting Plasma Glucose (FPG) test. The paramenters for designating blood sugar levels as healthy, pre-diabetic, and diabetic vary signifcantly between the test types. The number of individuals per glucose level category varied depending on the test type parameters. It is impossible to determine the true impacts of glucose level without the appropriate context around testing method. For the purpose of our project we chose to use the OGTT parameters as per the American Diabetes Association as it is the most commonly administered test type, however, this assumption may be incorrect.
+  For example, it is unknown how data was collected for the average glucose level. There are various types of glucose level measurement tests such as the Oral Glucose Tolerance Test (OGTT) and the Fasting Plasma Glucose (FPG) test. The parameters for designating blood sugar levels as healthy, pre-diabetic, and diabetic vary significantly between the test types. The number of individuals per glucose level category varied depending on the test type parameters. It is impossible to determine the true impacts of glucose level without the appropriate context around testing method. For the purpose of our project we chose to use the OGTT parameters as per the American Diabetes Association as it is the most commonly administered test type, however, this assumption may be incorrect.
 
   The graph below illustrates the differences between applying the OGTT and FPG parameters to the dataset.
 
@@ -135,28 +135,29 @@ _Note: "Unknown" in smoking_status means that the information is unavailable for
 
 - The dataset contained multiple columns for ratio attribute types with unique float values. While the precision of these unique values may offer meaningful insight when used to build a model, the precision of these values was detrimental to creating meaningful visualizations (ex. X-axis with a hundred distinct but similar values). To address this issue, we consulted previously validated clinical parameters established by medical associations to determine appropriate parameters for creating categorical bins. These bins (categories) were used to create more meaningful visualizations. Additional details can be found in the subsequent section.
 
-#### Identifying correlations:
- Preliminary visualization of data to understand patterns, correlations and data distribution
+#### Identifying correlations
+
+Preliminary visualization of data to understand patterns, correlations and data distribution
 
 ![Observations with stroke](images/stroke_comparative_visualizations/comparative_total.png)
 
-- After extract the observations with stroke we figured a big imbalances in the dataset, we only found: 249 obervations with stroke. It means only 4.9% of the observations and two of them was pediatric population.
+- After extract the observations with stroke we figured a big imbalances in the dataset, we only found: 249 observations with stroke. It means only 4.9% of the observations and two of them was pediatric population.
 
 - Adjustment for Age and Physiological Differences: After extensive analysis, it was decided to reduce confounding factors associated with age and physiological differences between adults (≥18 years old) and the pediatric population (<18 years old). For example, different tools and reference values are used to determine healthy weight and glucose levels in pediatric populations. Additionally, the incidence of pediatric stroke is estimated at approximately 1.2 to 13 cases per 100,000 children under 18 years old (2). In contrast, adults experience a much higher incidence, with nearly 151 cases per 100,000 individuals per year (3).
 
 - The big difference between the BMI values, with min value 10.3 and max value 97.6, made difficult the visualization of the correlation Stroke vs. BMI. Further, pediatric population had a different interpretation of BMI that is based on percentiles and standard deviations, this affect the interpretation of this variable because pediatric observations could be misclassified as low weight. After exclude the pediatric population we used the BMI classification from the CDC (4):
 
   - Underweight: < 18.5
-  - Healthy Weight: 18.5 > 25 
+  - Healthy Weight: 18.5 > 25
   - Overweight: 25 > 30
-  - Obesity: ≥ 30 
+  - Obesity: ≥ 30
 
     ![Stroke by BMI](images/Stroke%20Positive%20Visualizations/stroke_patients_by_bmi.png)
 
 - The big difference between average glucose level with min value in 55, and max value in 271, was an issue as well, after remove the pediatric population, we decide to use the American Diabetes Association classification (5):
 
   - Low glucose level: less tan 70 mg/dl
-  - Healthy Value: 70 - 140 mg/dl 
+  - Healthy Value: 70 - 140 mg/dl
   - Prediabetes or oral glucose intolerance: 141 - 199 mg/dl
   - Diabetes: ≥ 200 mg/dl: .
 
@@ -164,9 +165,9 @@ _Note: "Unknown" in smoking_status means that the information is unavailable for
 
 - It was used the canadian classification for age (6), excluding children categories and assuming the impact on the youth categories after exclude observations with less than 18 years old:
 
-  - Children:  0 - 14 years old
-  - Youth:  15 - 25 years old
-  - Adult:  25 - 64 years old
+  - Children: 0 - 14 years old
+  - Youth: 15 - 25 years old
+  - Adult: 25 - 64 years old
   - Senior ≥ 65 years old
 
 ## Data Analysis
@@ -175,81 +176,75 @@ _Note: "Unknown" in smoking_status means that the information is unavailable for
 
 - Immutable demographic characteristics:
 
-  ***Gender:***
-
+  **\*Gender:**\_
 
   ![stroke comparative by gender](images/stroke_comparative_visualizations/comparative_by_gender.png)
+
   - From the total observations, 39% of them was male and 61% was female.
   - From our 247 observations of stroke, 44% of them was male and 56% was female.
 
-  ***Age:***
-  
+  **\*Age:**\_
 
   ![age peak](images/Stroke%20Positive%20Visualizations/stroke_patients_by_age.png)
 
   - We could observed a increase of stroke incidence after 57 years old, with 60% of observations had 57 or more years old and 40% had less than 57 years old. And a second peak of incidence after 78 years old.
 
-
   ![age means](images/stroke_comparative_visualizations/comparative_by_age_category.png)
 
 - Mutable demographic characteristics:
 
-  ***Marital status:***
+  **\*Marital status:**\_
 
   ![stroke by married](images/stroke_comparative_visualizations/comparative_by_maried_status.png)
 
   - 89% of individuals with stroke were ever married, and 11% were never married. However, people are more likely to be married at older ages, and the likelihood of having a stroke also increases with age. Therefore, age could be a confounding factor in this case.
 
+**\*Setting:**\_
 
-  ***Setting:***
     ![mutab demog feat](images/Stroke%20Positive%20Visualizations/stroke_patients_categorical_2.png)
- 
 
-  ***Type of work:***
+**\*Type of work:**\_
 
     ![comp work type](images/stroke_comparative_visualizations/comparative_by_work_type.png)
 
 - Immutable Risk:
 
-  ***Comorbidities:***
-    ![stroke comorb](images/Stroke%20Positive%20Visualizations/stroke_patients_comorbidity.png)
+  **\*Comorbidities:**\_
+  ![stroke comorb](images/Stroke%20Positive%20Visualizations/stroke_patients_comorbidity.png)
 
-    ![stroke compar comorb](images/stroke_comparative_visualizations/comparative_by_comorb.png)
+  ![stroke compar comorb](images/stroke_comparative_visualizations/comparative_by_comorb.png)
 
-    - Through visualization, we found that patients with stroke tend to have higher rates of hypertension and heart disease than patients without stroke.
+  - Through visualization, we found that patients with stroke tend to have higher rates of hypertension and heart disease than patients without stroke.
 
 - Mutable Risk Factors:
 
-  ***Glucose average:***
-    
-    - According with the American Society of Diabetes classification, and in base of glucose average, 23% of the patients had an average in the diagnosis range of diabetes that was not reported in the dataset information or used as characteristic, also, 14% had an average of glucose in oral glucose intolerance and  52% have a normal value.
+  **\*Glucose average:**\_
 
+  - According with the American Society of Diabetes classification, and in base of glucose average, 23% of the patients had an average in the diagnosis range of diabetes that was not reported in the dataset information or used as characteristic, also, 14% had an average of glucose in oral glucose intolerance and 52% have a normal value.
 
     ![stroke comp gluc](images/stroke_comparative_visualizations/comparative_by_gluc_category.png)
 
-   - When we compare with patients without stroke, a few percentage  of them had glucose average in diabetic or oral glucose intolerance and they had more percentage in a healthy glucose value, this could sugest a protective factor there.
+  - When we compare with patients without stroke, a few percentage of them had glucose average in diabetic or oral glucose intolerance and they had more percentage in a healthy glucose value, this could suggest a protective factor there.
 
-
-  ***Body Mass Index:***
+  _**Body Mass Index:**_
   ![stroke comp bmi](images/stroke_comparative_visualizations/comparative_by_bmi.png)
 
-   -  Using the BMI classification from CDC, when comparing patients with and without stroke observations, the visualization shows similar foundings in them.
+  - Using the BMI classification from CDC, when comparing patients with and without stroke observations, the visualization shows similar foundings in them.
 
-  ***Stroke and smoke:***
-    ![stroke comp smoke](images/stroke_comparative_visualizations/comparative_by_smok_stat.png)
+  **\*Stroke and smoke:**\_
+  ![stroke comp smoke](images/stroke_comparative_visualizations/comparative_by_smok_stat.png)
 
-    - When we compare the percentage of patients in the “never smoked” category, between those with and without stroke, it appears to be a protective factor. On the other hand, being a former smoker seems to be a risk factor.
+  - When we compare the percentage of patients in the “never smoked” category, between those with and without stroke, it appears to be a protective factor. On the other hand, being a former smoker seems to be a risk factor.
 
 ### [Statistical Analysis](srs/statistical_analysis.ipynb)
-
 
 Selecting relevant features and observations to include in the model, while removing variables that could act as confounding factors to ensure model accuracy.
 
 #### Statistical Analyst of Features
 
-A chi-square test of independence was conducted to determine which features were significant among stroke patients. To employ this test, ratio type features were converetd to categorical using previously validated clinical parameters for age, bmi, and glucose level groups. The T-test was applied to continuous numerical variables and the Chi Square was applied on categorical variables . These results helped guide decisions on which features to include in building our predictive stroke model.
+A chi-square test of independence was conducted to determine which features were significant among stroke patients. To employ this test, ratio type features were converted to categorical using previously validated clinical parameters for age, bmi, and glucose level groups. The T-test was applied to continuous numerical variables and the Chi Square was applied on categorical variables . These results helped guide decisions on which features to include in building our predictive stroke model.
 
-The features of age, smoking status, glucose level, hypertension, heart disease, work type, and BMI were all significant (p-value , <0.05) and were included in training the model. The features of gender, residence type, and marriage status were excluded from training the model. Gender (p-value > 0.05) and residence type (p-value > 0.05) were not significant and thus excluded from the model based on their lack of impact. Marriage status was significant (p-value < 0.05) however, due to the significance of age among stroke patients, and the influence of age on marriage status (ie. older individuals are more likely to be married). There were concerns that including marital status could lead to an overestimation of its effect, since age acts as a confounding factor for this variable. After a statistical analysis, adjusting for maritial status by age the difference was not significant (p-value > 0.05), and the first result was explained due to the significance of age among stroke patients, the decision was made to exclude it from the model.
+The features of age, smoking status, glucose level, hypertension, heart disease, work type, and BMI were all significant (p-value , <0.05) and were included in training the model. The features of gender, residence type, and marriage status were excluded from training the model. Gender (p-value > 0.05) and residence type (p-value > 0.05) were not significant and thus excluded from the model based on their lack of impact. Marriage status was significant (p-value < 0.05) however, due to the significance of age among stroke patients, and the influence of age on marriage status (ie. older individuals are more likely to be married). There were concerns that including marital status could lead to an overestimation of its effect, since age acts as a confounding factor for this variable. After a statistical analysis, adjusting for marital status by age the difference was not significant (p-value > 0.05), and the first result was explained due to the significance of age among stroke patients, the decision was made to exclude it from the model.
 
 ##### [Final selection of features for model](reports/README_statistical_analyst.md)
 
@@ -274,7 +269,7 @@ The features of age, smoking status, glucose level, hypertension, heart disease,
 
 ### Model Purpose
 
-- The purpose of the developed model was to identify individuals aged 18 or older who are most at risk of developing stroke, based on the selected features of smoking status, age, glucose level, hypertension, heart disease, work type, and bmi. These individuals could then receieve preventative interventions targeting mutuable risk features.
+- The purpose of the developed model was to identify individuals aged 18 or older who are most at risk of developing stroke, based on the selected features of smoking status, age, glucose level, hypertension, heart disease, work type, and bmi. These individuals could then receive preventative interventions targeting mutable risk features.
 
 ### Building the Model
 
@@ -290,7 +285,7 @@ The features of age, smoking status, glucose level, hypertension, heart disease,
 
 ### Model Performance
 
--On average the model 3 achieves an F1 score of 0.75, but depending on the fold it's confidene interval ranges between 0.633 and 0.867.
+-On average the model 3 achieves an F1 score of 0.75, but depending on the fold it's confidence interval ranges between 0.633 and 0.867.
 
 ![alt text](<images/Model Visualizations/model_3_visualization.png>)
 
@@ -298,7 +293,7 @@ Recall is consistently around 0.80, meaning the model captures most true positiv
 
 Precision is lower at 0.71, which suggests the model returns some false positives.
 
-The F1 score is about 0.75, which is relatively balanced but skews towards recall. It does a good job of catching stroke patients, but also flags non-stroke patients approximately 30% of the time. False psoitives are more desirable in this instance, as missing a possible stroke case is far more harmful than reccomending healthy lifestyle changes to patients that are not at risk. However, the score still has much room for improvement, and this level of false positives would not be acceptable for other medical conditions which require more invasive interventions.
+The F1 score is about 0.75, which is relatively balanced but skews towards recall. It does a good job of catching stroke patients, but also flags non-stroke patients approximately 30% of the time. False positives are more desirable in this instance, as missing a possible stroke case is far more harmful than recommending healthy lifestyle changes to patients that are not at risk. However, the score still has much room for improvement, and this level of false positives would not be acceptable for other medical conditions which require more invasive interventions.
 
 Accuracy is around 0.74 which is fairly good. The accuracy of the model is high enough for it to be employed as a possible screening tool, but not precise enough for diagnosis purposes. This is acceptable for our project in which screening and early warning is the ultimate goal.
 
@@ -306,7 +301,7 @@ In healthcare we believe it is critical to be transparent regarding range uncert
 
 ### Model Conclusion and Next Steps
 
-- Our model could serve as a clincial screening tool to idenitfy adults at risk for stroke and drive low-risk lifestyle change reccomendations such as smoking cessation, weight loss and glucose level managment through dietary and exercise changes, and therapy or activities for stress management. The model should not be used for reccomending moderate to high-risk interventions such as medications. It's level of false positives could result in harm if medications are prescribed to individuals who do not need them.
+- Our model could serve as a clinical screening tool to identify adults at risk for stroke and drive low-risk lifestyle change recommendations such as smoking cessation, weight loss and glucose level management through dietary and exercise changes, and therapy or activities for stress management. The model should not be used for recommending moderate to high-risk interventions such as medications. It's level of false positives could result in harm if medications are prescribed to individuals who do not need them.
 
 - Our next steps in refining our model would involve the following:
 
@@ -316,7 +311,7 @@ In healthcare we believe it is critical to be transparent regarding range uncert
 
   Leveraging SHAP analysis to understand what features are driving predictions.
 
-  Auditing the model for potential biases, and consider tracking performance across various demographic segmentations. This is crucial to ensure certain groups are not underserved by our model.
+  Auditing the model for potential biases, and consider tracking performance across various demographic segmentation. This is crucial to ensure certain groups are not underrepresented in our model.
 
   Validating the model on additional external stroke datasets to confirm it performs consistently and reliably.
 
@@ -359,24 +354,22 @@ In addition, the project will provide insights and recommendations to highlight 
 - Python
 
 ### Libraries Used
+
 - NumPy: matrix operations, numerical computations
 - Pandas: data analysis, handling datasets
 - SciPy: statistical tests and scientific computations
 - Statsmodels: statistical modeling and regression analysis
 - Matplotlib: creating graphs and plots
--Seaborn: enhancing matplotlib plots, data visualization
+  -Seaborn: enhancing matplotlib plots, data visualization
 - Plotly: interactive graphs and plots
 - scikit-learn (SKLearn): machine learning, preprocessing, classification, pipelines, model evaluation
 - PIL (Pillow): image processing
 - Requests: HTTP requests, downloading data from the web
 
-
-
-
 ## Team member's videos
 
-- Joshua Okojie
-- Lindsay Hudson: https://drive.google.com/file/d/1u1E-IqdGAs9LuM7lpb5aCkh5Q2tjoLI6/view?usp=sharing
+- Joshua Okojie : <https://docs.google.com/presentation/d/1ihOe3Sjjh9W96V67kaFtCuPUNT32zLd7/edit?usp=sharing&ouid=109843096425715990334&rtpof=true&sd=true>
+- Lindsay Hudson: <https://drive.google.com/file/d/1u1E-IqdGAs9LuM7lpb5aCkh5Q2tjoLI6/view?usp=sharing>
 - Mariluz Lopez Zamora
 
 ## References
@@ -387,8 +380,8 @@ In addition, the project will provide insights and recommendations to highlight 
 - (4) <https://www.cdc.gov/bmi/adult-calculator/bmi-categories.html>
 - (5) <https://diabetes.org/about-diabetes/diagnosis>
 - (6) <https://www.statcan.gc.ca/en/concepts/definitions/age2>
-- Dong, Y., & Peng, C. Y. J. (2013). Principled missing data methods for researchers. SpringerPlus, 2(1), 222. https://doi.org/10.1186/2193-1801-2-222
-- Junaid, K. P., Kiran, T., Gupta, M., Kishore, K., & Siwatch, S. (2025). How much missing data is too much to impute for longitudinal health indicators? A preliminary guideline for the choice of the extent of missing proportion to impute with multiple imputation by chained equations. Population Health Metrics, 23, Article 2. https://doi.org/10.1186/s12963-025-00364-2
+- Dong, Y., & Peng, C. Y. J. (2013). Principled missing data methods for researchers. SpringerPlus, 2(1), 222. <https://doi.org/10.1186/2193-1801-2-222>
+- Junaid, K. P., Kiran, T., Gupta, M., Kishore, K., & Siwatch, S. (2025). How much missing data is too much to impute for longitudinal health indicators? A preliminary guideline for the choice of the extent of missing proportion to impute with multiple imputation by chained equations. Population Health Metrics, 23, Article 2. <https://doi.org/10.1186/s12963-025-00364-2>
 
--  <https://doi.org/10.1186/s12963-025-00364-2>
+- <https://doi.org/10.1186/s12963-025-00364-2>
   <https://python-graph-gallery.com/>
